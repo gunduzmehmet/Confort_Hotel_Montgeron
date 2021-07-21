@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!
+{% endblock %}
+
+{% block body %}
+	<main class="container mt-5">
+		<h3>Nous Contacter</h3>
+		<div class="row g-4">
+			<div class="col-12 col-lg-8">
+				<hr>
+				<form action="#" method="POST" enctype="multipart/form-data" class="row g-4 needs-validation" novalidate>
+					<div class="col-12 col-lg-6">
+						<label for="nom" class="form-label">Nom
+							<span class="text-muted">(requis)</span>
+						</label>
+						<input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
+						<div class="valid-feedback">
+							Vous avez un joli nom.
+						</div>
+						<div class="invalid-feedback">
+							Merci de saisir votre nom !
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<label for="prenom" class="form-label">Prénom</label>
+						<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
+					</div>
+					<div class="col-12 col-lg-7">
+						<label for="email" class="form-label">E-mail
+							<span class="text-muted">(requis)</span>
+						</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="adresse@exemple.com" required>
+					</div>
+
+					<div class="col-12">
+						<label for="message" class="form-label">Message</label>
+						<textarea class="form-control" id="message" name="message" rows="3">Bonjour,</textarea>
+					</div>
+
+					<div class="col-12 text-end">
+						<button class="btn btn-primary" type="submit">Envoyer</button>
+					</div>
+				</form>
+				<hr class="d-lg-none">
+			</div>
+			<div class="col-12 col-lg-4">
+				<div class="card shadow-sm">
+					<div class="text-center mt-3">
+						<i class="bi bi-clock fs-1"></i>
+					</div>
+
+					<div class="card-body">
+						<h5 class="card-title">Les horaires</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<p class="text-muted fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, architecto.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
