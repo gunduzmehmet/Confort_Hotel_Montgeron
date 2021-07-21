@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PanierController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		{% for key,item in panier %}
+
+			<p>{{ key }}
+				-
+				{{ item }}</p>
+
+		{% endfor %}
+
+		<div>
+			<a href="{{ path('add_panier', {'id' : 3}) }}">
+				Ajouter au panier
+				<a/>
+			</div>
+
+			<div>
+				<a href="{{ path('delete_panier') }}">
+					Vider le panier
+					<a/>
+				</div>
+
+				<div>
+					<a href="{{ path('delete_article_panier', {'id' : 3}) }}">
+						Supprime un article
+						<a/>
+					</div>
+
+					<div>
+						<a href="{{ path('add_5_panier') }}" class="m-5">
+							Ajouter 5 article
+							<a/>
+						</div>
+
+						<div>
+							<a href="{{ path('delete_un_article_panier', {'id' : 4}) }}" class="m-5">
+								Retire un article
+								<a/>
+							</div>
+
+
+						{% endblock %}

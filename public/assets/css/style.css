@@ -1,0 +1,83 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #F7F7F7;
+}
+
+header {
+    position: sticky ;
+    top: 0;
+    background-color: #334B5B;
+    width: 100%;
+
+}
+
+h1 {
+    text-align: center;
+    color: goldenrod;
+
+}
+
+
+nav ul {
+
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #334B5B;
+    width: 100%;
+    list-style-type: none;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: goldenrod;
+    display: flex;
+    font-size: 17px;
+    box-sizing: border-box;
+
+}
+
+nav a:hover {
+    background-color: #F7F7F7;
+    transition: 0.2s;
+    opacity: 0.5;
+
+}
+
+main {
+    padding-top: 200px;
+}
+
+#infos {
+    color: #334B5B;
+}
+
+#equipe ul {
+    list-style-type: none;
+
+}
+
+  .carousel-inner img {
+    width:500%;
+    height: 100%;
+  }
+ 
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #334B5B;
+    color: goldenrod;
+    width: 100%;
+    list-style-type: none;
+}

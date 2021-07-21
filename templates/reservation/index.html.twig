@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+     <div class="wrapper">
+
+            <!-- Header -->
+            <?php include '../view/headerView.php'; ?>
+
+            <!-- Content -->
+            <div class="content booking booking-confirm">
+                <div class="content-overlay">
+
+                    <!-- Steps progression -->
+                    <?php include '../view/bookingProgressionView.php' ?>
+
+                    <!-- Container -->
+                    <div class="container container-main">
+                        <h1>Votre réservation a bien été prise en compte.</h1>
+                        <h2>Merci pour votre confiance :)</h2>
+
+                        <table>
+                            <tr class="booking-confirm-description">
+                                <td rowspan="4">
+                                    <img src="#" />
+                                </td>
+                                <td>
+                                    <h3>CHAMBRE DOUBLE avec b</h3>
+                                </td>
+                                <td rowspan="4" class="booking-confirm-price">
+                                    <p>Prix TTC</p>
+                                    <h1>70.00 EUR</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="booking-confirm-checked">Voyage d'affaire</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="booking-confirm-checked">Demi-pension</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="booking-confirm-checked">Avec salle de bain</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr class="booking-confirm-description">
+                                <td rowspan="4">
+                                    <img src="#" />
+                                </td>
+                                <td>
+                                    <h3>CHAMBRE SIMPLE</h3>
+                                </td>
+                                <td rowspan="4" class="booking-confirm-price">
+                                    <p>Prix TTC</p>
+                                    <h1>30.00 EUR</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="booking-confirm-checked">Voyage d'affaire</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="booking-confirm-checked">Demi-pension</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="booking-confirm-unchecked">Avec salle de bain</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+
+  <div class="span5">
+                    <aside>
+
+
+                        <h3>Contact Form </h3>
+                        
+
+                        <form name="messages"  method="post" role="form" class="contactForm">
+                            <div class="row">
+                                <div class="span4 form-group">
+                                    <input type="text" id="messages_name" name="messages[name]" class="input-block-level"  placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="span4 form-group">
+                                    <input type="email" class="input-block-level" id="messages_email" name="messages[email]" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="span4 form-group">
+                                    <input type="text" class="input-block-level" id="messages_subject" name="messages[subject]" maxlength="75" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="span4 form-group">
+                                    <textarea class="input-block-level" id="messages_message" name="messages[message]" maxlength="255" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                    <div class="validation"></div>
+                                    <div class="text-center">
+
+                                        <input type="hidden" name="token" value="#" />
+                                        <button class="btn btn-theme" type="submit">Send a message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </aside>
+                </div>
+
+
+
+                <div class="span7">
+
+                    <div class="widget">
+                        <div class="widget">
+
+                            <ul class="social-links">
+                                <li><a href="#" title="Twitter"><i class="icon-square icon-32 icon-twitter"></i></a></li>
+                                <li><a href="#" title="Facebook"><i class="icon-square icon-32 icon-facebook"></i></a></li>
+                                <li><a href="#" title="Instagram"><i class="icon-square icon-32 icon-pinterest"></i></a></li>
+                                <li><a href="#" title="Linkedin"><i class="icon-square icon-32 icon-linkedin"></i></a></li>
+                                <li><a href="#" title="Pinterest"><i class="icon-square icon-32 icon-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="rheading">Contact Information<span></span></h3>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
